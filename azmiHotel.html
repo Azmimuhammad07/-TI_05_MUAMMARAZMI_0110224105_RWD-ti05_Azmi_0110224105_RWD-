@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x500') center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .btn-primary {
+            background-color: #ff5722;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #e64a19;
+        }
+        table{
+            text-align: center;
+        }
+       
+        .display-4 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-top: 15px;
+            color: rgb(255, 255, 255);
+            text-shadow: 
+        2px 2px 0 black, 
+        2px 1px 0 black;   
+        }
+        .lead{
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .navbar-brand{
+            margin-left: 14px;
+        }
+        .lead{
+            font-weight: bold;
+            text-shadow: 
+            1px 1px 0 black, 
+            1px 1px 0 black;
+        }
+        .btn:hover{
+            transform: scale(1.2); /* Biar icon membesar pas dihover */
+             transition: 0.3s; /* Smooth effect */
+        }
+
+        .table {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .table th, .table td {
+        text-align: center;
+        vertical-align: middle;
+        padding: 12px 15px;
+    }
+
+   
+    .table-dark {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f2f2f2;
+    }
+
+    .table-bordered th, .table-bordered td {
+        border: 1px solid #dee2e6;
+    }
+    footer a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+
+    footer a:hover {
+        color: #f0ad4e;
+    }
+
+    footer i {
+        margin-right: 8px;
+    }
+    
+    @media (max-width: 768px) {
+        .table th, .table td {
+            padding: 10px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+      <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Azmi Hotel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#"> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#branches">Branches</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#promo">Promotions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#container">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header with Hero Section-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/fix1.jpg" style="height: 65vh; padding: 20px;" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold">Welcome to Azmi Hotel</h1>
+                    <p class="lead">Experience luxury and comfort like never before</p>
+                    <a href="#about" class="btn" style="background: linear-gradient(to right, #ff4b5c, #ff7f32); color: white; font-weight: bold; margin-bottom: 10px;">Pelajari Selengkapnya</a>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/fix2.jpeg" style="height: 65vh; padding: 20px;" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold">Welcome to Azmi Hotel</h1>
+                    <p class="lead">Your gateway to unparalleled luxury and relaxation</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/fix3.jpeg" style="height: 65vh; padding: 20px;" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold">Welcome to Azmi Hotel</h1>
+                    <p class="lead">Where elegance meets exceptional comfort</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>    
+    
+    
+
+ 
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold">About Us</h2>
+            <p class="mt-4">Hotel kami menyajikan perpaduan sempurna antara kemewahan modern dan pesona tradisional yang memikat. Dengan desain yang elegan dan fasilitas terbaik, kami memberikan kenyamanan bagi setiap tamu yang datang. Terletak di lokasi-lokasi strategis, hotel kami mudah diakses dan dikelilingi oleh berbagai tempat menarik. Kami berkomitmen untuk memberikan pengalaman menginap yang tak terlupakan, dengan pelayanan yang ramah dan profesional. Setiap detail, dari ruang tidur yang nyaman hingga fasilitas lengkap, dirancang untuk memenuhi kebutuhan dan keinginan tamu, menciptakan suasana yang penuh kenyamanan dan relaksasi</p>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/Bedroom.jpg" class="card-img-top" alt="Luxury Rooms" style="height: 57vh;">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Rooms</h5>
+                            <p class="card-text">Stay in style and comfort with our premium rooms designed for relaxation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/Restaurant.jpg" class="card-img-top" alt="Fine Dining" style="height: 60vh;">
+                        <div class="card-body">
+                            <h5 class="card-title">Fine Dining</h5>
+                            <p class="card-text">Enjoy gourmet meals prepared by our world-class chefs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/rileks_room.jpg" class="card-img-top" alt="Relaxation Areas" style="height: 60vh;">
+                        <div class="card-body">
+                            <h5 class="card-title">Relaxation Areas</h5>
+                            <p class="card-text">Unwind with our spa and wellness facilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section id="branches" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold">Our Branches</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/cabang1.jpg" class="card-img-top" alt="Branch 1" style="height: 50vh;">
+                        <div class="card-body">
+                            <h5 class="card-title">Branch 1</h5>
+                            <p class="card-text">South Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/cabang2.jpg" class="card-img-top" alt="Branch 2" style="height: 50vh;">
+                        <div class="card-body">
+                            <h5 class="card-title">Branch 2</h5>
+                            <p class="card-text">Central Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/cabang5.jpg" class="card-img-top" alt="Branch 3" style="height: 50vh;">
+                        <div class="card-body">
+                            <h5 class="card-title">Branch 3</h5>
+                            <p class="card-text">West Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+<section id="promo" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4">Promosi</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered mt-4">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga</th>
+                        <th>Durasi</th>
+                        <th>Syarat</th>
+                        <th>Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Paket Horizon</td>
+                        <td>Rp1.500.000</td>
+                        <td>1 Malam</td>
+                        <td>Tidak dapat dibatalkan</td>
+                        <td>Kamar standar dengan sarapan lezat.</td>
+                    </tr>
+                    <tr>
+                        <td>Paket Serenity</td>
+                        <td>Rp2.500.000</td>
+                        <td>1 Malam</td>
+                        <td>Dapat dibatalkan 50%</td>
+                        <td>Kamar deluxe dengan sarapan dan fasilitas Spa.</td>
+                    </tr>
+                    <tr>
+                        <td>Paket Vibes</td>
+                        <td>Rp3.500.000</td>
+                        <td>2 Malam</td>
+                        <td>Tidak dapat dibatalkan</td>
+                        <td>Kamar premium dengan sarapan dan makan malam romantis.</td>
+                    </tr>
+                    <tr>
+                        <td>Paket Bliss</td>
+                        <td>Rp4.500.000</td>
+                        <td>3 Malam</td>
+                        <td>Dapat dibatalkan 50%</td>
+                        <td>Suite mewah dengan makan pagi, siang, dan malam.</td>
+                    </tr>
+                    <tr>
+                        <td>Paket Ultimate</td>
+                        <td>Rp6.000.000</td>
+                        <td>5 Malam</td>
+                        <td>Tidak dapat dibatalkan</td>
+                        <td>Vila pribadi dengan fasilitas lengkap dan semua makanan termasuk.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+<footer class="bg-dark text-white py-3">
+    <div class="container" id="container">
+        <div class="row justify-content-center">
+            <!-- Kolom Alamat -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h5>Alamat</h5>
+                <p>Jl. Menuju Kebahagiaan No.123, Jakarta, Indonesia</p>
+            </div>
+            <!-- Kolom Sosial Media -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h5>Sosial Media</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.instagram.com/azmimuhammad_12" class="fab fa-instagram text-white" target="_blank">Instagram: Azmi_Hotel</a></li>
+                </ul>
+            </div>
+            <!-- Kolom Kontak -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h5>Kontak</h5>
+                <p>Email: <a href="mailto:info@contohwebsite.com" class="text-white">azmihotel@gmail.com</a></p>
+                <p>Telp: (021) 123-4567</p>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p>&copy; 2024 Semua Hak Dilindungi. Azmi Hotel</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Menambahkan Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Menambahkan Font Awesome JS -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+</body>
+</html>
